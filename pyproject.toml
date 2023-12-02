@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ipydeck"
+version = "0.1.0"
+description = "Yet another Jupyter widget for deck.gl"
+authors = ["Kentaro Ozeki <32771324+ozekik@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "ipydeck" }]
+include = ["ipydeck/static/*.js", "ipydeck/static/*.css"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+anywidget = "^0.7.1"
+pydantic = "^2.5.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.9"
+watchfiles = "^0.21.0"
+geopandas = "^0.14.1"
+matplotlib = "^3.8.2"
+sidecar = "^0.7.0"
+jupyterlab-code-formatter = "^2.2.1"
+black = "^23.11.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,13 @@
+dist
+ipydeck/static
+
+# Exclude by default
+*.ipynb
+
+# Node
+node_modules
+
+# Python
+.venv
+__pycache__
+.ipynb_checkpoints
