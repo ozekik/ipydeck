@@ -10,23 +10,41 @@ pip install ipydeck
 
 ## Usage
 
+From <https://deck.gl/playground>:
+
 ```py
 from ipydeck import Deck, Layer, ViewState
 
-layer = Layer(
-    "ScatterplotLayer",
-    data=[{"position": [0, 0], "color": [255, 0, 0]}],
-    get_position="position",
-    get_fill_color="color",
-    get_radius=1000,
+layers = [
+    Layer(
+        type="GeoJsonLayer",
+        data="https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/geojson/vancouver-blocks.json",
+        opacity=0.8,
+        stroked=False,
+        filled=True,
+        extruded=True,
+        wireframe=True,
+        elevation_scale=0.1,
+        get_elevation="@@=properties.valuePerSqm",
+        get_fill_color=[199, 233, 180],
+        get_line_color=[255, 255, 255],
+    )
+]
+
+view_state = ViewState(
+    latitude=49.254, longitude=-123.13, zoom=11, max_zoom=16, pitch=45, bearing=0
 )
 
-view_state = ViewState(latitude=0, longitude=0, zoom=1)
-
-deck = Deck(layers=[layer], initial_view_state=view_state)
+deck = Deck(
+    layers=layers,
+    initial_view_state=view_state,
+    map_style="light",
+)
 
 deck
 ``````
+
+![screenshot](assets/screenshot.png)
 
 ## Alternatives
 
