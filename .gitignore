@@ -1,6 +1,9 @@
 dist
 ipydeck/static
 
+.coverage
+coverage.*
+
 # Exclude by default
 *.ipynb
 

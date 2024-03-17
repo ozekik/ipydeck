@@ -1,2 +1,4 @@
-from .base import Layer  # noqa
-from .geojson import GeoJsonLayer  # noqa
+from .base import Layer
+from .geojson import GeoJsonLayer
+
+__all__ = ["Layer", "GeoJsonLayer"]

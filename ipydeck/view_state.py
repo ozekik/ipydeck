@@ -1,16 +1,17 @@
+from __future__ import annotations
+
 from dataclasses import asdict, dataclass
-from typing import Optional
 
 
 @dataclass
 class ViewState:
-    longitude: float = None
-    latitude: float = None
-    zoom: int = None
-    min_zoom: Optional[int] = None
-    max_zoom: Optional[int] = None
-    pitch: Optional[float] = None
-    bearing: Optional[float] = None
+    longitude: float | None = None
+    latitude: float | None = None
+    zoom: int | None = None
+    min_zoom: int | None = None
+    max_zoom: int | None = None
+    pitch: float | None = None
+    bearing: float | None = None
 
     def serialize(self) -> dict:
         return asdict(self)

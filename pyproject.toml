@@ -12,9 +12,7 @@ include = ["ipydeck/static/*.js", "ipydeck/static/*.css"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-anywidget = "^0.7.1"
-pydantic = "^2.5.2"
-
+anywidget = "^0.9.3"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.0.9"
@@ -23,8 +21,14 @@ geopandas = "^0.14.1"
 matplotlib = "^3.8.2"
 sidecar = "^0.7.0"
 jupyterlab-code-formatter = "^2.2.1"
-black = "^23.11.0"
-isort = "^5.12.0"
+ipywidgets = "^8.1.2"
+jupyterlab-widgets = "^3.0.10"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+coverage = {extras = ["toml"], version = "^7.4.4"}
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]

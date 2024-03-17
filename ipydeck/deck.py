@@ -1,6 +1,9 @@
+from __future__ import annotations
+
 from dataclasses import asdict
+from logging import getLogger
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 import anywidget
 import traitlets
@@ -8,6 +11,8 @@ import traitlets
 from .base_map import DefaultBaseMap
 from .layers.base import Layer
 from .view_state import ViewState
+
+logger = getLogger(__name__)
 
 
 class Deck(anywidget.AnyWidget):
@@ -43,7 +48,7 @@ class Deck(anywidget.AnyWidget):
         initial_view_state: ViewState = ViewState(latitude=0, longitude=0, zoom=1),
         width: int | str = "100%",
         height: int | str = 500,
-        tooltip: Optional[Dict] = None,
+        tooltip: Dict | None = None,
         map_provider="carto",
         api_keys=None,
     ):
@@ -56,6 +61,8 @@ class Deck(anywidget.AnyWidget):
         if map_style in DefaultBaseMap.short_names:
             map_style = DefaultBaseMap.short_names[map_style]
         self.map_style = map_style
+
+        logger.debug(layers[0].serialize())
 
         self._initial_view_state = asdict(initial_view_state)
         self._layers = list(map(lambda x: x.serialize(), layers))
