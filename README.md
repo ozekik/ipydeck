@@ -1,5 +1,7 @@
 # ipydeck
 
+[![PyPI](https://img.shields.io/pypi/v/ipydeck.svg)](https://pypi.org/project/ipydeck/)
+
 `ipydeck` is yet another Jupyter widget for [deck.gl](https://deck.gl/), built on [anywidget](https://github.com/manzt/anywidget/).
 
 ## Installation
@@ -44,7 +46,7 @@ deck = Deck(
 deck
 ``````
 
-![screenshot](assets/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/ozekik/ipydeck/master/assets/screenshot.png)
 
 ## Alternatives
 
