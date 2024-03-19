@@ -13,8 +13,8 @@ def is_pandas_df(obj):
     return (
         # (obj.__class__.__module__ in ["pandas.core.frame", "geopandas.geodataframe"])
         obj.__class__.__module__ == "pandas.core.frame"
-        and obj.to_records
-        and obj.to_dict
+        and bool(obj.to_records)
+        and bool(obj.to_dict)
     )
 
 
