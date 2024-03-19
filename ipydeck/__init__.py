@@ -2,7 +2,7 @@ import importlib.metadata
 
 from .base_map import CartoBaseMap, DefaultBaseMap
 from .deck import Deck
-from .layers import GeoJsonLayer, Layer
+from .layers import BitmapTileLayer, GeoJsonLayer, Layer
 from .view_state import ViewState
 
 try:
@@ -12,6 +12,7 @@ except importlib.metadata.PackageNotFoundError:
 
 __all__ = [
     "Layer",
+    "BitmapTileLayer",
     "GeoJsonLayer",
     "ViewState",
     "Deck",

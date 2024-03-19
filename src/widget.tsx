@@ -34,6 +34,9 @@ import {
   TileLayer,
   TripsLayer,
 } from "deck.gl/typed";
+
+import BitmapTileLayer from "./layers/BitmapTileLayer";
+
 import React, { useEffect, useState } from "react";
 import Map, { AttributionControl } from "react-map-gl/maplibre";
 
@@ -51,6 +54,7 @@ const INITIAL_VIEW_STATE = {
 const LAYER_TYPES: { [key: string]: any } = {
   ArcLayer,
   BitmapLayer,
+  BitmapTileLayer,
   ColumnLayer,
   ContourLayer,
   GeoJsonLayer,
@@ -89,7 +93,7 @@ function deserializeLayer(serializedLayer: any) {
 
   args = convertFunctions(args, {});
 
-  // console.log("args", args);
+  // console.log("type", type, "args", args);
 
   // TODO: Custom layer support
   if (type in LAYER_TYPES) {
