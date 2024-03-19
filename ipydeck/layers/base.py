@@ -25,6 +25,7 @@ class Layer:
     visible: bool | None = None
     pickable: bool | None = None
     opacity: float | None = None
+    on_click: bool | None = None
 
     def __init__(
         self,
@@ -35,6 +36,7 @@ class Layer:
         visible: bool | None = None,
         pickable: bool | None = None,
         opacity: float | None = None,
+        on_click: bool | None = None,
         **kwargs,
     ):
         if data is not None:
@@ -52,6 +54,7 @@ class Layer:
         self.visible = visible
         self.pickable = pickable
         self.opacity = opacity
+        self.on_click = on_click
         self._kwargs = kwargs
 
     def serialize(self):

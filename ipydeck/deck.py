@@ -31,6 +31,13 @@ class Deck(anywidget.AnyWidget):
     _initial_view_state = traitlets.Dict().tag(sync=True)
     _layers = traitlets.List().tag(sync=True)
 
+    # Reactive properties
+    click = traitlets.Dict(allow_none=True).tag(sync=True)
+
+    # @traitlets.observe("click")
+    # def _handle_click(self, change):
+    #     print(change)
+
     # @traitlets.observe("layers")
     # def _update_layers(self, change):
     #     # print(change)

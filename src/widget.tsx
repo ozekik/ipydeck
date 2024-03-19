@@ -110,9 +110,27 @@ export const render = createRender(() => {
 
   const [layers, updateLayers] = useState<any[]>([]);
 
+  const [_click, setClick] = useModelState<any>("click");
+
+  // useEffect(() => {
+  //   console.log("click", _click);
+  // }, [_click]);
+
   useEffect(() => {
     const deserialized = _layers.map((layer) => deserializeLayer(layer));
     // console.log("deserialized", deserialized);
+
+    deserialized.map((layer: any) => {
+      if (layer.props.onClick) {
+        // NOTE: layer.props is read-only
+        layer.onClick = (info: any, event: any) => {
+          // const timestamp = new Date().toISOString();
+          // TODO: Add layer information
+          setClick(info.object);
+        };
+      }
+    });
+
     updateLayers(deserialized);
   }, [_layers]);
 
@@ -131,6 +149,7 @@ export const render = createRender(() => {
             ? initialViewState
             : INITIAL_VIEW_STATE
         }
+        getCursor={() => "default"} // TODO: Make this configurable
         controller={true}
         layers={layers}
         style={{ width: "100%", height: "100%" }}
