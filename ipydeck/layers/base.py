@@ -39,6 +39,7 @@ class Layer:
     ):
         if data is not None:
             if is_pandas_df(data):
+                # NOTE: This doesn't work for GeoJSON, but could be useful for other formats
                 data = data.to_dict(orient="records")
             elif is_geopandas_df(data):
                 data = json.loads(data.to_json())
