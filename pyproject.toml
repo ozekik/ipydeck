@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ipydeck"
-version = "0.4.0"
+version = "0.4.1"
 description = "Yet another Jupyter widget for deck.gl"
 authors = ["Kentaro Ozeki <32771324+ozekik@users.noreply.github.com>"]
 homepage = "https://ozekik.github.io/ipydeck/"
