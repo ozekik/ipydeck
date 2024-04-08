@@ -4,6 +4,12 @@
 
 `ipydeck` is yet another Jupyter widget for [deck.gl](https://deck.gl/), built on [anywidget](https://github.com/manzt/anywidget/).
 
+## Features
+
+- Supports wider range of deck.gl layers
+    - Including additional `BitmapTileLayer`
+- Supports updating layers
+
 ## Installation
 
 ```sh
