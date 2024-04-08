@@ -1,4 +1,9 @@
+import React, { useEffect, useState } from "react";
+
 import { createRender, useModelState } from "@anywidget/react";
+
+import Map, { AttributionControl } from "react-map-gl/maplibre";
+
 import { BASEMAP } from "@deck.gl/carto/typed";
 import { _convertFunctions as convertFunctions } from "@deck.gl/json/typed";
 import { DeckGL } from "@deck.gl/react/typed";
@@ -35,15 +40,12 @@ import {
   TripsLayer,
 } from "deck.gl/typed";
 
+import root from "react-shadow";
+
 import BitmapTileLayer from "./layers/BitmapTileLayer";
-
-import React, { useEffect, useState } from "react";
-import Map, { AttributionControl } from "react-map-gl/maplibre";
-
 import { interpolate } from "./utils";
 
-import "maplibre-gl/dist/maplibre-gl.css";
-import "./widget.css";
+import maplibreCss from "maplibre-gl/dist/maplibre-gl.css";
 
 const INITIAL_VIEW_STATE = {
   longitude: 0,
@@ -93,7 +95,7 @@ function deserializeLayer(serializedLayer: any) {
 
   args = convertFunctions(args, {});
 
-  // console.log("type", type, "args", args);
+  console.log("type", type, "args", args);
 
   // TODO: Custom layer support
   if (type in LAYER_TYPES) {
@@ -139,7 +141,7 @@ export const render = createRender(() => {
   }, [_layers]);
 
   return (
-    <div
+    <root.div
       style={{
         width: Number.isFinite(width) ? `${width}px` : width,
         height: Number.isFinite(height) ? `${height}px` : height,
@@ -176,6 +178,7 @@ export const render = createRender(() => {
           <AttributionControl compact={true} />
         </Map>
       </DeckGL>
-    </div>
+      <style>{maplibreCss}</style>
+    </root.div>
   );
 });

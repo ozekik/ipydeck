@@ -7,6 +7,8 @@ esbuild.build({
   bundle: true,
   minify: true,
   target: ["es2020"],
+  // Cf. https://stackoverflow.com/questions/69088135/
+  loader: { ".css": "text" },
   outdir: "ipydeck/static/",
   format: "esm",
   // Ref https://github.com/manzt/anywidget/issues/369#issuecomment-1792376003
