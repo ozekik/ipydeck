@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@anywidget/react':
-    specifier: ^0.0.4
-    version: 0.0.4(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 0.0.6
+    version: 0.0.6(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
   '@deck.gl/carto':
     specifier: ^8.9.35
     version: 8.9.35(@deck.gl/aggregation-layers@8.9.35)(@deck.gl/core@8.9.35)(@deck.gl/extensions@8.9.35)(@deck.gl/geo-layers@8.9.35)(@deck.gl/layers@8.9.35)(@loaders.gl/core@3.4.15)
@@ -37,6 +37,9 @@ dependencies:
     version: 20.4.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
+  '@anywidget/types':
+    specifier: ^0.1.8
+    version: 0.1.8(react@18.2.0)
   '@jupyter-widgets/base':
     specifier: ^6.0.7
     version: 6.0.7(react@18.2.0)
@@ -58,8 +61,8 @@ devDependencies:
 
 packages:
 
-  /@anywidget/react@0.0.4(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GkGOW6P7hmFBWur1QZUQPM/LrkrUu/mpADm+VuqgGcd7KrQMqq6IqtYb13oS0I03k3xaAiEaeLZTUi995gor7A==}
+  /@anywidget/react@0.0.6(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ntEk0GKwGDnGB8EPuU7nmfXFMqJ7qAskzNc9hvvn7e4fhkrwdlc+cBK3yUIHgLSWfjOH/f5FY8rFX2hKwZ0hnA==}
     peerDependencies:
       '@types/react': ^18.0.0
       '@types/react-dom': ^18.0.0
@@ -84,7 +87,6 @@ packages:
       - bufferutil
       - react
       - utf-8-validate
-    dev: false
 
   /@babel/runtime@7.24.4:
     resolution: {integrity: sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==}
