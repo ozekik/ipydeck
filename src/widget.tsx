@@ -4,9 +4,9 @@ import { createRender, useModelState } from "@anywidget/react";
 
 import Map, { AttributionControl } from "react-map-gl/maplibre";
 
-import { BASEMAP } from "@deck.gl/carto/typed";
-import { _convertFunctions as convertFunctions } from "@deck.gl/json/typed";
-import { DeckGL } from "@deck.gl/react/typed";
+import { BASEMAP } from "@deck.gl/carto";
+import { _convertFunctions as convertFunctions } from "@deck.gl/json";
+import { DeckGL } from "@deck.gl/react";
 import {
   // Layer,
   ArcLayer,
@@ -38,7 +38,7 @@ import {
   Tile3DLayer,
   TileLayer,
   TripsLayer,
-} from "deck.gl/typed";
+} from "deck.gl";
 
 import root from "react-shadow";
 

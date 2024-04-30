@@ -1,4 +1,4 @@
-import { BitmapLayer, TileLayer } from "deck.gl/typed";
+import { BitmapLayer, TileLayer } from "deck.gl";
 
 export default class BitmapTileLayer extends TileLayer {
   static defaultProps = {
