@@ -12,7 +12,7 @@ include = ["ipydeck/static/*.js", "ipydeck/static/*.css", "NOTICE.txt"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-anywidget = "0.9.10"
+anywidget = "^0.9.13"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.0.9"
