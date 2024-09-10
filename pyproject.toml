@@ -16,14 +16,14 @@ anywidget = "^0.9.13"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.0.9"
-watchfiles = "^0.21.0"
+watchfiles = ">=0.21.0,<1"
 geopandas = "^0.14.1"
 matplotlib = "^3.8.2"
 sidecar = "^0.7.0"
-jupyterlab-code-formatter = "^2.2.1"
 ipywidgets = "^8.1.2"
 jupyterlab-widgets = "^3.0.10"
-pyogrio = "^0.7.2"
+pyogrio = ">=0.7.2,<1"
+pyarrow = ">=16.0.0,<18"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.1.1"
