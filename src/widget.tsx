@@ -145,6 +145,7 @@ export const render = createRender(() => {
       style={{
         width: Number.isFinite(width) ? `${width}px` : width,
         height: Number.isFinite(height) ? `${height}px` : height,
+        position: "relative",
       }}
     >
       <DeckGL
