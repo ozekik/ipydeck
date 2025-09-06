@@ -6,7 +6,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@anywidget/react": "0.0.8",
+    "@anywidget/react": "0.2.0",
     "@deck.gl/carto": "^9.1.14",
     "@deck.gl/json": "^9.1.14",
     "@deck.gl/react": "^9.1.14",

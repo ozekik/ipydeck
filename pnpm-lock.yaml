@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@anywidget/react':
-        specifier: 0.0.8
-        version: 0.0.8(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.2.0
+        version: 0.2.0(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@deck.gl/carto':
         specifier: ^9.1.14
         version: 9.1.14(2b0cc06f0e0239be75d0ce58499e47a3)
@@ -63,13 +63,13 @@ importers:
 
 packages:
 
-  '@anywidget/react@0.0.8':
-    resolution: {integrity: sha512-obr4EasXgWra485u+G4V3Msn7A1EOnowarvR62FRjpv2Rz6AyOoLMz2B03Z9j3DrWdD0634fMGu5ZAeRyjuV4w==}
+  '@anywidget/react@0.2.0':
+    resolution: {integrity: sha512-7jmyfEeKDzMAOmdvzQ/KNtct72lqR1j6KYtb3RtrnHoDMMO5aymqbXib5bvDdnZQOiqlTU+B+cKxtBpYc0W4hg==}
     peerDependencies:
-      '@types/react': ^18.0.0
-      '@types/react-dom': ^18.0.0
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      '@types/react': ^18.0.0 || ^19.0.0
+      '@types/react-dom': ^18.0.0 || ^19.0.0
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@anywidget/types@0.2.0':
     resolution: {integrity: sha512-+XtK4uwxRd4JpuevUMhirrbvC0V4yCA/i0lEjhmSAtOaxiXIg/vBKzaSonDuoZ1a9LEjUXTW2+m7w+ULgsJYvg==}
@@ -1606,7 +1606,7 @@ packages:
 
 snapshots:
 
-  '@anywidget/react@0.0.8(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@anywidget/react@0.2.0(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@anywidget/types': 0.2.0
       '@types/react': 18.3.24
