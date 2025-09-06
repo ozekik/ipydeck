@@ -59,7 +59,7 @@ class Deck(anywidget.AnyWidget):
         map_provider="carto",
         api_keys=None,
     ):
-        self.inital_view_state = initial_view_state
+        self.initial_view_state = initial_view_state
         self.layers = layers
         self.width = width
         self.height = height
