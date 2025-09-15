@@ -131,7 +131,7 @@ export const render = createRender(() => {
     deserialized.map((layer: any) => {
       if (layer.props.onClick) {
         // NOTE: layer.props is read-only
-        layer.onClick = (info: any, event: any) => {
+        layer.onClick = (info: any) => {
           // const timestamp = new Date().toISOString();
           // TODO: Add layer information
           setClick(info.object);

@@ -1,5 +1,17 @@
 import { BitmapLayer, TileLayer } from "deck.gl";
 
+type BitmapTileSubLayerProps = {
+  tile: {
+    bbox: {
+      west: number;
+      south: number;
+      east: number;
+      north: number;
+    };
+  };
+  [key: string]: unknown;
+};
+
 export default class BitmapTileLayer extends TileLayer {
   static defaultProps = {
     ...TileLayer.defaultProps,
@@ -11,15 +23,15 @@ export default class BitmapTileLayer extends TileLayer {
     },
   };
 
-  static _renderSubLayers(props) {
+  static _renderSubLayers(props: BitmapTileSubLayerProps) {
     console.log("renderSubLayers = BitmapLayer");
     const {
       bbox: { west, south, east, north },
     } = props.tile;
 
-    return new BitmapLayer(props, {
+    return new BitmapLayer(props as Record<string, unknown>, {
       data: undefined,
-      image: props.data,
+      image: props.data as string | undefined,
       bounds: [west, south, east, north],
     });
   }
