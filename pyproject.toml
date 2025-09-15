@@ -1,35 +1,52 @@
-[tool.poetry]
+[project]
 name = "ipydeck"
 version = "0.4.5"
 description = "Yet another Jupyter widget for deck.gl"
-authors = ["Kentaro Ozeki <32771324+ozekik@users.noreply.github.com>"]
-homepage = "https://ozekik.github.io/ipydeck/"
-repository = "https://github.com/ozekik/ipydeck"
-license = "MIT"
+authors = [
+  { name = "Kentaro Ozeki", email = "32771324+ozekik@users.noreply.github.com" },
+]
+requires-python = ">=3.10,<4"
 readme = "README.md"
-packages = [{ include = "ipydeck" }]
-include = ["ipydeck/static/*.js", "ipydeck/static/*.css", "NOTICE.txt"]
+license = "MIT"
+dependencies = ["anywidget>=0.9.13,<0.10"]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-anywidget = "^0.9.13"
+[project.urls]
+Homepage = "https://ozekik.github.io/ipydeck/"
+Repository = "https://github.com/ozekik/ipydeck"
 
-[tool.poetry.group.dev.dependencies]
-jupyterlab = "^4.0.9"
-watchfiles = ">=0.21.0,<1"
-geopandas = "^0.14.1"
-matplotlib = "^3.8.2"
-sidecar = "^0.7.0"
-ipywidgets = "^8.1.2"
-jupyterlab-widgets = "^3.0.10"
-pyogrio = ">=0.7.2,<1"
-pyarrow = ">=17.0.0"
+[dependency-groups]
+dev = [
+  "jupyterlab>=4.0.9,<5",
+  "watchfiles>=0.21.0,<1",
+  "geopandas>=0.14.1,<0.15",
+  "matplotlib>=3.8.2,<4",
+  "sidecar>=0.7.0,<0.8",
+  "ipywidgets>=8.1.2,<9",
+  "jupyterlab-widgets>=3.0.10,<4",
+  "pyogrio>=0.7.2,<1",
+  "pyarrow>=17.0.0",
+]
+test = ["pytest>=8.1.1,<9", "coverage[toml]>=7.4.4,<8", "pytest-cov>=4.1.0,<5"]
 
-[tool.poetry.group.test.dependencies]
-pytest = "^8.1.1"
-coverage = { extras = ["toml"], version = "^7.4.4" }
-pytest-cov = "^4.1.0"
+[tool.uv]
+default-groups = ["dev", "test"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "ipydeck",
+  "ipydeck/static/*.js",
+  "ipydeck/static/*.css",
+  "NOTICE.txt",
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+  "ipydeck",
+  "ipydeck/static/*.js",
+  "ipydeck/static/*.css",
+  "NOTICE.txt",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
