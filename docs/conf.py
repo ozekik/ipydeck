@@ -24,7 +24,7 @@ extensions = [
     "sphinx.ext.autosummary",
     # "sphinx_copybutton",
     # "sphinx_design",
-    # "jupyter_sphinx",
+    "jupyter_sphinx",
     # "sphinx_togglebutton",
     # "nbsphinx",
     # "numpydoc",
@@ -57,7 +57,7 @@ html_static_path = ["_static"]
 
 #     "globaltoc_expand_depth": 1,
 # }
-html_title = "ipydeck"
+html_title = "ipydeck documentation"
 html_theme_options = {
     "footer_icons": [
         {

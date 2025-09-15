@@ -31,6 +31,7 @@ dev = [
   "sphinx-autobuild>=2024.10.3",
   "myst-parser>=4.0.1",
   "furo>=2025.7.19",
+  "jupyter-sphinx>=0.5.3",
 ]
 test = ["pytest>=8.1.1,<9", "coverage[toml]>=7.4.4,<8", "pytest-cov>=4.1.0,<5"]
 
@@ -41,6 +42,13 @@ docs-open = "open _build/html/index.html"
 
 [tool.uv]
 default-groups = ["dev", "test"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+testpaths = [
+  "tests",
+  "ipydeck",
+]
 
 [tool.hatch.build.targets.sdist]
 include = [

@@ -6,6 +6,11 @@ ipydeck
    :start-after: ipydeck
 
 .. toctree::
+   :maxdepth: 1
+
+   quickstart
+
+.. toctree::
    :hidden:
    :maxdepth: 1
    :caption: API documentation
