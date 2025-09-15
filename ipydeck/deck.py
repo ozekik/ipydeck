@@ -69,7 +69,7 @@ class Deck(anywidget.AnyWidget):
             map_style = DefaultBaseMap.short_names[map_style]
         self.map_style = map_style
 
-        logger.debug(layers[0].serialize())
+        logger.debug(layers[0].serialize() if layers else "no layers")
 
         self._initial_view_state = asdict(initial_view_state)
         self._layers = list(map(lambda x: x.serialize(), layers))
