@@ -3,7 +3,7 @@
 [![PyPI](https://img.shields.io/pypi/v/ipydeck.svg)](https://pypi.org/project/ipydeck/)
 [![CI](https://github.com/ozekik/ipydeck/actions/workflows/ci.yml/badge.svg)](https://github.com/ozekik/ipydeck/actions/workflows/ci.yml)
 
-`ipydeck` is yet another Jupyter widget for [deck.gl](https://deck.gl/), built on [anywidget](https://github.com/manzt/anywidget/).
+[`ipydeck`](https://github.com/ozekik/ipydeck) is yet another Jupyter widget for [deck.gl](https://deck.gl/), built on [anywidget](https://github.com/manzt/anywidget/).
 
 ## Features
 
