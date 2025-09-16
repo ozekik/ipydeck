@@ -14,7 +14,7 @@ ipydeck
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: API documentation
+   :caption: Core API
 
    deck
    viewstate

@@ -16,9 +16,9 @@ logger = getLogger(__name__)
 
 
 class Deck(anywidget.AnyWidget):
-    """Interactive Deck.GL map widget for Jupyter front ends.
+    """Interactive deck.gl map widget for Jupyter front ends.
 
-    The widget mirrors the Deck.GL JavaScript API and keeps a serialized
+    The widget mirrors the deck.gl JavaScript API and keeps a serialized
     representation of the scene in sync with the front-end bundle that lives
     in :mod:`ipydeck.static`. Only a subset of the traitlets are exposed to the
     browser; internal counterparts prefixed with an underscore are used for the

@@ -37,7 +37,7 @@ renders a scatterplot centered on San Francisco.
    deck = Deck(
        layers=[scatter],
        initial_view_state=ViewState(latitude=37.8, longitude=-122.4, zoom=11),
-       tooltip={"text": "Deck.GL"},
+       tooltip={"text": "deck.gl"},
    )
 
    deck
@@ -55,7 +55,7 @@ payload.
    deck2 = Deck(
        layers=[scatter],
        initial_view_state=ViewState(latitude=37.8, longitude=-122.4, zoom=11),
-       tooltip={"text": "Deck.GL"},
+       tooltip={"text": "deck.gl"},
    )
    deck2.layers[0].data[0]["radius"] = 200
    deck2.update()
