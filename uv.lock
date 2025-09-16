@@ -842,23 +842,6 @@ wheels = [
 ]
 
 [[package]]
-name = "furo"
-version = "2025.7.19"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "accessible-pygments" },
-    { name = "beautifulsoup4" },
-    { name = "pygments" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "sphinx-basic-ng" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/d0/69/312cd100fa45ddaea5a588334d2defa331ff427bcb61f5fe2ae61bdc3762/furo-2025.7.19.tar.gz", hash = "sha256:4164b2cafcf4023a59bb3c594e935e2516f6b9d35e9a5ea83d8f6b43808fe91f", size = 1662054, upload-time = "2025-07-19T10:52:09.754Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3a/34/2b07b72bee02a63241d654f5d8af87a2de977c59638eec41ca356ab915cd/furo-2025.7.19-py3-none-any.whl", hash = "sha256:bdea869822dfd2b494ea84c0973937e35d1575af088b6721a29c7f7878adc9e3", size = 342175, upload-time = "2025-07-19T10:52:02.399Z" },
-]
-
-[[package]]
 name = "geopandas"
 version = "0.14.4"
 source = { registry = "https://pypi.org/simple" }
@@ -951,7 +934,6 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "furo" },
     { name = "geopandas" },
     { name = "ipywidgets" },
     { name = "jupyter-sphinx" },
@@ -960,16 +942,13 @@ dev = [
     { name = "matplotlib" },
     { name = "myst-parser" },
     { name = "pyarrow" },
-    { name = "pydata-sphinx-theme" },
     { name = "pyogrio" },
-    { name = "shibuya" },
     { name = "sidecar" },
     { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "sphinx-autobuild", version = "2024.10.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "sphinx-autobuild", version = "2025.8.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "sphinx-book-theme" },
-    { name = "sphinxawesome-theme" },
     { name = "taskipy" },
     { name = "watchfiles" },
 ]
@@ -984,7 +963,6 @@ requires-dist = [{ name = "anywidget", specifier = ">=0.9.13,<0.10" }]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "furo", specifier = ">=2025.7.19" },
     { name = "geopandas", specifier = ">=0.14.1,<0.15" },
     { name = "ipywidgets", specifier = ">=8.1.2,<9" },
     { name = "jupyter-sphinx", specifier = ">=0.5.3" },
@@ -993,14 +971,11 @@ dev = [
     { name = "matplotlib", specifier = ">=3.8.2,<4" },
     { name = "myst-parser", specifier = ">=4.0.1" },
     { name = "pyarrow", specifier = ">=17.0.0" },
-    { name = "pydata-sphinx-theme", specifier = ">=0.16.1" },
     { name = "pyogrio", specifier = ">=0.7.2,<1" },
-    { name = "shibuya", specifier = ">=2025.8.16" },
     { name = "sidecar", specifier = ">=0.7.0,<0.8" },
     { name = "sphinx", specifier = ">=8.1.3" },
     { name = "sphinx-autobuild", specifier = ">=2024.10.3" },
     { name = "sphinx-book-theme", specifier = ">=1.1.3" },
-    { name = "sphinxawesome-theme", specifier = ">=5.3.2" },
     { name = "taskipy", specifier = ">=1.14.1" },
     { name = "watchfiles", specifier = ">=0.21.0,<1" },
 ]
@@ -2988,19 +2963,6 @@ wheels = [
 ]
 
 [[package]]
-name = "shibuya"
-version = "2025.8.16"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/73/42/497cb621cccd43ca81dba8dc1d4fed1099cbcde3eea7e4e0fbfd1222c212/shibuya-2025.8.16.tar.gz", hash = "sha256:1c639cf646a33026b48eee5c29fd51476e767709f7a87f5656d21d2665d7ee22", size = 80785, upload-time = "2025-08-16T13:59:27.722Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d9/fc/bc2094308aed85b6d5e098c44bf1dce7db98f0635138cf27d82f638afd43/shibuya-2025.8.16-py3-none-any.whl", hash = "sha256:90739b5d14ac38b44b99a392b9b0be7e83137890f36420d52a2079cc29fc1a74", size = 96467, upload-time = "2025-08-16T13:59:26.131Z" },
-]
-
-[[package]]
 name = "sidecar"
 version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -3155,19 +3117,6 @@ wheels = [
 ]
 
 [[package]]
-name = "sphinx-basic-ng"
-version = "1.0.0b2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/98/0b/a866924ded68efec7a1759587a4e478aec7559d8165fac8b2ad1c0e774d6/sphinx_basic_ng-1.0.0b2.tar.gz", hash = "sha256:9ec55a47c90c8c002b5960c57492ec3021f5193cb26cebc2dc4ea226848651c9", size = 20736, upload-time = "2023-07-08T18:40:54.166Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3c/dd/018ce05c532a22007ac58d4f45232514cd9d6dd0ee1dc374e309db830983/sphinx_basic_ng-1.0.0b2-py3-none-any.whl", hash = "sha256:eb09aedbabfb650607e9b4b68c9d240b90b1e1be221d6ad71d61c52e29f7932b", size = 22496, upload-time = "2023-07-08T18:40:52.659Z" },
-]
-
-[[package]]
 name = "sphinx-book-theme"
 version = "1.1.3"
 source = { registry = "https://pypi.org/simple" }
@@ -3179,20 +3128,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/89/69/61dfa3b3851610b5f45960737bd99f8c5b2d70ba73f9ac84a527e0c564ae/sphinx_book_theme-1.1.3.tar.gz", hash = "sha256:1f25483b1846cb3d353a6bc61b3b45b031f4acf845665d7da90e01ae0aef5b4d", size = 434230, upload-time = "2024-06-12T14:11:22.128Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2b/80/90574e2e82c955b9c6f6b77f7badb2cf2ef4ef77599e4343cced2d098681/sphinx_book_theme-1.1.3-py3-none-any.whl", hash = "sha256:a554a9a7ac3881979a87a2b10f633aa2a5706e72218a10f71be38b3c9e831ae9", size = 430129, upload-time = "2024-06-12T14:11:20.002Z" },
-]
-
-[[package]]
-name = "sphinxawesome-theme"
-version = "5.3.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "beautifulsoup4" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11' and python_full_version < '3.13'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/45/58/6f3e05f77c881e1356d73fc1d99561efe1795671bd56e7fb47c63a32cc1f/sphinxawesome_theme-5.3.2.tar.gz", hash = "sha256:0629d38b80aefc279b1186c53a7a6faf21e721b5b2ecda14f488ca1074e2631f", size = 364039, upload-time = "2024-11-08T11:51:03.257Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/9b/e9/ca6a7178677bb171c8fd7f9eab726c00182168d38a79d2a58e7678590227/sphinxawesome_theme-5.3.2-py3-none-any.whl", hash = "sha256:5f2bb6b6ab8fa11db1ded5590106eb557351d6a6c36adea7ebd4e0f4bc96945d", size = 375173, upload-time = "2024-11-08T11:51:01.441Z" },
 ]
 
 [[package]]
