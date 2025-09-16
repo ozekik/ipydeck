@@ -36,9 +36,35 @@ class GeoJsonLayer(Layer):
         elevation_scale: Optional[float] = None,
         material: Optional[Any] = None,
     ):
-        self.type = type
-        self.data = data
-        self.id = id
+        super().__init__(
+            type=type,
+            data=data,
+            id=id,
+            point_type=point_type,
+            visible=visible,
+            pickable=pickable,
+            opacity=opacity,
+            auto_highlight=auto_highlight,
+            filled=filled,
+            get_fill_color=get_fill_color,
+            stroked=stroked,
+            get_line_color=get_line_color,
+            get_line_width=get_line_width,
+            line_width_units=line_width_units,
+            line_width_scale=line_width_scale,
+            line_width_min_pixels=line_width_min_pixels,
+            line_width_max_pixels=line_width_max_pixels,
+            line_joint_rounded=line_joint_rounded,
+            line_miter_limit=line_miter_limit,
+            line_cap_rounded=line_cap_rounded,
+            line_billboard=line_billboard,
+            extruded=extruded,
+            wireframe=wireframe,
+            _full3d=_full3d,
+            get_elevation=get_elevation,
+            elevation_scale=elevation_scale,
+            material=material,
+        )
         self.point_type = point_type
         self.visible = visible
         self.pickable = pickable

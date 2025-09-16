@@ -18,9 +18,14 @@ class BitmapTileLayer(Layer):
         max_zoom: int | None = None,
         min_zoom: int = 0,
     ):
-        self.type = type
-        self.data = data
-        self.id = id
+        super().__init__(
+            type=type,
+            data=data,
+            id=id,
+            tile_size=tile_size,
+            max_zoom=max_zoom,
+            min_zoom=min_zoom,
+        )
         self.tile_size = tile_size
         self.max_zoom = max_zoom
         self.min_zoom = min_zoom
