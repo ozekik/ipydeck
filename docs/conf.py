@@ -22,7 +22,8 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.extlinks",
     "sphinx.ext.autosummary",
-    # "sphinx_copybutton",
+    "sphinx.ext.githubpages",
+    "sphinx_copybutton",
     # "sphinx_design",
     "jupyter_sphinx",
     # "sphinx_togglebutton",
@@ -38,7 +39,6 @@ extensions = [
     # "sphinx.ext.autosummary",
     # "sphinx.ext.intersphinx",
     # "sphinx.ext.todo",
-    # "sphinx.ext.githubpages",
 ]
 
 templates_path = ["_templates"]

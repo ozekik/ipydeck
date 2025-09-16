@@ -23,6 +23,7 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "esbuild": "^0.25.9",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10",
     "typescript": "^5.9.2"
   }
