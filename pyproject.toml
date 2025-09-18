@@ -46,26 +46,15 @@ default-groups = ["dev", "test"]
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"
-testpaths = [
-  "tests",
-  "ipydeck",
-]
+testpaths = ["tests", "ipydeck"]
 
 [tool.hatch.build.targets.sdist]
-include = [
-  "ipydeck",
-  "ipydeck/static/*.js",
-  "ipydeck/static/*.css",
-  "NOTICE.txt",
-]
+include = ["ipydeck", "NOTICE.txt"]
+artifacts = ["ipydeck/static/*.js", "ipydeck/static/*.css"]
 
 [tool.hatch.build.targets.wheel]
-include = [
-  "ipydeck",
-  "ipydeck/static/*.js",
-  "ipydeck/static/*.css",
-  "NOTICE.txt",
-]
+include = ["ipydeck", "NOTICE.txt"]
+artifacts = ["ipydeck/static/*.js", "ipydeck/static/*.css"]
 
 [build-system]
 requires = ["hatchling"]
