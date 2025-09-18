@@ -1,6 +1,6 @@
 [project]
 name = "ipydeck"
-version = "0.4.6"
+version = "0.4.7"
 description = "Yet another Jupyter widget for deck.gl"
 authors = [
   { name = "Kentaro Ozeki", email = "32771324+ozekik@users.noreply.github.com" },
