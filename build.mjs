@@ -15,7 +15,7 @@ await esbuild.build({
   entryPoints: ["./src/widget.tsx"],
   bundle: true,
   minify: true,
-  target: ["es2020"],
+  target: ["es2022"],
   // Cf. https://stackoverflow.com/questions/69088135/
   loader: { ".css": "text" },
   outdir,
