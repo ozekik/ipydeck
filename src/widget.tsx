@@ -106,7 +106,7 @@ function deserializeLayer(serializedLayer: any) {
   }
 }
 
-export const render = createRender(() => {
+function MapWidget() {
   const [initialViewState] = useModelState<any>("_initial_view_state");
   const [_layers] = useModelState<any[]>("_layers");
   const [width] = useModelState<number | string>("width");
@@ -184,4 +184,15 @@ export const render = createRender(() => {
       <style>{maplibreCss}</style>
     </root.div>
   );
-});
+}
+
+// AFM: https://anywidget.dev/en/afm/
+export default {
+  // initialize({ model }) {
+  //   // Set up shared state or event handlers.
+  //   return () => {
+  //     // Optional: Called when the widget is destroyed.
+  //   };
+  // },
+  render: createRender(MapWidget),
+};
