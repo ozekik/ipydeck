@@ -10,11 +10,15 @@
 - Supports wider range of deck.gl layers
     - Including additional `BitmapTileLayer`
 - Supports updating layers
+- Supports [marimo](https://marimo.io/)
 
 ## Installation
 
 ```sh
+# with pip
 pip install ipydeck
+# with uv
+uv add ipydeck
 ```
 
 ## Usage
