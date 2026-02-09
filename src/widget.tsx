@@ -113,7 +113,7 @@ function MapWidget() {
   const [height] = useModelState<number | string>("height");
   const [map_style] = useModelState<string>("map_style");
   const [tooltip] = useModelState<
-    { html: string; style?: string } | null | undefined
+    { html?: string; text?: string; style?: string } | null | undefined
   >("_tooltip");
 
   const [layers, updateLayers] = useState<any[]>([]);
@@ -164,8 +164,10 @@ function MapWidget() {
         style={{ width: "100%", height: "100%" }}
         getTooltip={({ object }) => {
           if (!tooltip || !object) return null;
+          const template = tooltip.html || tooltip.text;
+          if (!template) return null;
           return {
-            html: interpolate(tooltip.html, {
+            html: interpolate(template, {
               ...(object.properties || {}),
               ...object,
             }),

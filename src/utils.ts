@@ -3,6 +3,7 @@ export function interpolate(template: string, params: any) {
   const names = Object.keys(params);
   const vals = Object.values(params);
   // console.log("names, vals", names, vals);
+  // console.log("template", template);
 
   // Replace invalid characters for identifiers for with underscores in names to avoid errors in `new Function`
   names.map((name, i) => {
@@ -11,8 +12,13 @@ export function interpolate(template: string, params: any) {
       .replace(/[^\w$\p{L}\p{N}]/gu, "_");
   });
 
-  const result = new Function(...names, `return \`${template}\`;`)(...vals);
+  let result = new Function(...names, `return \`${template}\`;`)(...vals);
   // console.log("result", result);
+
+  // COMPAT: Replace `{name}` with values from params object
+  result = result.replace(/\{([^}]+)\}/g, (_, key: string) => {
+    return params?.[key] ?? "";
+  });
 
   return result;
 }
