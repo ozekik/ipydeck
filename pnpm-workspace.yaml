@@ -1,0 +1,9 @@
+allowBuilds:
+  "@vaadin/vaadin-usage-statistics": false
+  esbuild: true
+
+ignoredBuiltDependencies:
+  - "@vaadin/vaadin-usage-statistics"
+
+onlyBuiltDependencies:
+  - esbuild

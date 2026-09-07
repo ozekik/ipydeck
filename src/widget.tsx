@@ -48,6 +48,13 @@ import { interpolate } from "./utils";
 
 import maplibreCss from "maplibre-gl/dist/maplibre-gl.css";
 
+declare const __WORKER_SOURCE__: string;
+
+import { setWorkerUrl } from "maplibre-gl";
+const blob = new Blob([__WORKER_SOURCE__], { type: "text/javascript" });
+const workerUrl = URL.createObjectURL(blob);
+setWorkerUrl(workerUrl);
+
 const INITIAL_VIEW_STATE = {
   longitude: 0,
   latitude: 0,
