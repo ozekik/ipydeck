@@ -102,7 +102,7 @@ function deserializeLayer(serializedLayer: any) {
     return value === null ? acc : { ...acc, [key]: value };
   }, {});
 
-  args = convertFunctions(args, {});
+  args = convertFunctions(args, { configuration: {} } as any);
 
   console.log("type", type, "args", args);
 
